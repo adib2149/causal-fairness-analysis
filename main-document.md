@@ -35,7 +35,6 @@ Submission deadline: **March 01, 2023**
 4. Provide proof-of-concept as a tool that supports broad use of AI algorithms
 
 ---
-
 ## Submission Requirements
 
 1. Github Repo (with two python scripts - .py files)
@@ -119,6 +118,20 @@ Determined by an evenly weighted average of scores from the judgement criteria l
 
 A multidisciplinary Judging Panel composed of experts in related fields (e.g., clinical informatics, machine learning and artificial intelligence, bioinformatics, ethics) will evaluate all submissions against the judging criteria and submission requirements, including the outputs of the bias detection tool code against our healthcare models and data.
 
+---
+## Starter Kit Provided
+
+### Dataset:
+1. Columbia Open Health Data (COHD)
+2. SyntheticMass
+3. Integrated Clinical and Environmental Exposure Data (ICEES)
+
+### ML Algos:
+1. Artificial Neural Networks (Conventional or Deep Learning), Logistic Regression, Random Forest, decision tree, and k-nearest neighbor
+2. Bayesian models (such as Naive Bayes) and Gradient boosting (such as XGBoost)
+3. Some example code and kaggle codes are also provided
+
+---
 ## FAQ
 
 1. No ml model needed, just a general solution that will work with any ML model and data
