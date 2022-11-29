@@ -119,7 +119,7 @@ Determined by an evenly weighted average of scores from the judgement criteria l
 A multidisciplinary Judging Panel composed of experts in related fields (e.g., clinical informatics, machine learning and artificial intelligence, bioinformatics, ethics) will evaluate all submissions against the judging criteria and submission requirements, including the outputs of the bias detection tool code against our healthcare models and data.
 
 ---
-## Starter Kit Provided
+## Starter Kit Provided [(link)](https://docs.google.com/document/d/1wzZsMnl4UYE3du8XyMYNJT2xLNIAqN5c30vq5499fAI/edit#)
 
 ### Dataset:
 1. Columbia Open Health Data (COHD)
@@ -130,6 +130,11 @@ A multidisciplinary Judging Panel composed of experts in related fields (e.g., c
 1. Artificial Neural Networks (Conventional or Deep Learning), Logistic Regression, Random Forest, decision tree, and k-nearest neighbor
 2. Bayesian models (such as Naive Bayes) and Gradient boosting (such as XGBoost)
 3. Some example code and kaggle codes are also provided
+
+---
+## Bias Primer Provided [(link)](https://nihsncatsbias-gqi5483.slack.com/files/U0486HGKKB9/F04CR2PFNEL/bias_primer_from-solasai.pdf)
+
+*Need to explore*
 
 ---
 ## FAQ
