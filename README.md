@@ -4,4 +4,4 @@ In this tutorial, we will be exploring a causal fairness analysis, based ona. re
 
 We will generate a computational pipeline, present it theoretically and show the data analysis in parallel.
 
-See the notebook for details.
+See the [main document](https://github.com/adib2149/causal-fairness-analysis/blob/main/main-document.md) for primary writeup and [code notebook](https://github.com/adib2149/causal-fairness-analysis/blob/main/causal-fairness-analysis.ipynb) for details.
