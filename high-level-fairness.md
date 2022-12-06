@@ -6,7 +6,7 @@
 
 Assume we have the COMPAS dataset, we have a juror (*aka. model / causal model*) who follows an internal logic (*aka. algorithm / causal mechanism*). 
 
-Assume we also have an existing dataset, based on the actions of this juror (*aka. COMPAS dataset*) in predicting recidivism on a certain population.
+Assume we also have an existing dataset, based on the actions of this juror (*aka. COMPAS dataset*) in predicting recidivism on a certain population. Meaning this dataset has *predicted recidivism scores* and *actual recidivism scores*.
 
 ## What is the question we are looking for?
 
@@ -21,12 +21,27 @@ The **causal question**: Are we marking individuals released on parole with high
 1. **Bias** (*Bias Quantification*) Is there a bias in the combination of model & dataset? How do we measure/ quantify bias?
 2. **Fairness**: (*Bias Mitigation*) What are the changes in the policy/treatment needed, to mitigate the estimated bias?
 
+## Optimization Measure
+
+Let's move forward with ***Total Variation (TV)***, as marked in "Causal Fairness Analysis" paper
+
 ---
 
-## Questions to Quantify Bias
+## Questions to Quantify Bias - Pathway towards Bias
 
-1. **Observational Bias**: check if african-americans are given more recidivism scores than caucasians? (aka. $E(Y|X1) - E(Y|X0)$ )
+1. **Observational Bias**: check if african-americans are given more recidivism scores than caucasians? (aka. $E(Y|X1) - E(Y|X0)$ ) (data, predicted outcome)
 2. **Conditional Bias**: check if african-americans are given more recidivism scores than caucasians, conditional on all other variables? (aka. $\sum_z E(Y|X1,Z) - \sum_z E(Y|X0,Z)$ )
+3. **Causal Bias 1**: given we known the **SCM** (along with known data & model), check if african-americans are given more recidivism scores than caucasians?
+4. **Causal Bias 2**: given we known the **SFM** (along with known data & model), check if african-americans are given more recidivism scores than caucasians?
+5. **Distribution of TV**: 
+
+![width:200px](causal-effects-pathways.png)
+
+---
+
+## Questions to Mitigate Bias - Pathway towards Fairness
+
+1. 
 
 ---
 
