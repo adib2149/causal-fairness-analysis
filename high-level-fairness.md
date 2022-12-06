@@ -42,7 +42,7 @@ Let's move forward with ***Total Variation (TV)***, as marked in "Causal Fairnes
 6. **Causal Bias 2**: given we known the **SFM** (along with known data & model), check if african-americans are given more recidivism scores than caucasians? --- data, predicted outcome, causal model
 7. **Distribution of TV**: 
 
-![width:200px](causal-effects-pathways.png)
+![width:300px](causal-effects-pathways.png)
 
 ---
 
@@ -50,10 +50,11 @@ Let's move forward with ***Total Variation (TV)***, as marked in "Causal Fairnes
 
 To my understanding, there is no **non-causal** version of this question. Because, if we can't identify which treatment variables to alter, there is no way of mitigating bias.
 
-1. **Causal Fairness 1**: What factors can be changed to minimize total variation (TV) between predicted recidivism scores of african-americans and caucassians? Cross-check with predicted recidivism scores since otherwise it doesn't make sense to predict fair.
-2. **Causal Fairness 2**: If the variable race is not avialable in the dataset, would the model still have similar predicted recidivism scores?
-3. **Causal Fairness 3**: How to remove direct and spurious effect but keep only indirect effect?
-4. **Paper**: Explore all other defintions from paper
+1. **Observational Fairness**: Explore feature importance / SHAP values / weights of features to see which factor has higher impact in decision making.
+2. **Causal Fairness 1**: What factors can be changed to minimize total variation (TV) between predicted recidivism scores of african-americans and caucassians? --- domain knowledge
+3. **Causal Fairness 2**: If the variable race is not available in the dataset, would the model still have similar predicted recidivism scores?
+4. **Causal Fairness 3**: How to remove direct and spurious effect but keep only indirect effect?
+5. **Paper**: Explore all other definitions from paper
 
 ---
 
