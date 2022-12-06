@@ -4,7 +4,7 @@
 
 ## Preset
 
-Assume we have the COMPAS dataset, we have a juror (*aka. model / causal model*) who follows an internal logic (*aka. algorithm / causal mechanism*). 
+Assume we have the COMPAS dataset, we have a juror (*aka. model / causal model*) who follows an internal logic (*aka. algorithm / causal mechanism*). We also assume the juror has a good understanding of the system and makes good predictions (*model with high performance*).
 
 Assume we also have an existing dataset, based on the actions of this juror (*aka. COMPAS dataset*) in predicting recidivism on a certain population. Meaning this dataset has *predicted recidivism scores* and *actual recidivism scores*.
 
@@ -29,11 +29,13 @@ Let's move forward with ***Total Variation (TV)***, as marked in "Causal Fairnes
 
 ## Questions to Quantify Bias - Pathway towards Bias
 
-1. **Observational Bias**: check if african-americans are given more recidivism scores than caucasians? (aka. $E(Y|X1) - E(Y|X0)$ ) (data, predicted outcome)
-2. **Conditional Bias**: check if african-americans are given more recidivism scores than caucasians, conditional on all other variables? (aka. $\sum_z E(Y|X1,Z) - \sum_z E(Y|X0,Z)$ )
-3. **Causal Bias 1**: given we known the **SCM** (along with known data & model), check if african-americans are given more recidivism scores than caucasians?
-4. **Causal Bias 2**: given we known the **SFM** (along with known data & model), check if african-americans are given more recidivism scores than caucasians?
-5. **Distribution of TV**: 
+1. **Observational Bias 1**: check difference between predicted recidivism scores and actual recidivism scores in each race group? --- predicted rec scores, actual rec scores, race
+2. **Biased Prediction 1**: check if african-americans are given more recidivism scores than caucasians? --- data (with only predicted), assumes no ground-truth discrimination between groups
+3. **Biased Prediction 2**: check if african-americans are given more recidivism scores than caucasians, and compare with actual recidivism scores? --- data, no assumptions
+4. **Conditional Bias 1 & 2**: check if african-americans are given more recidivism scores than caucasians, conditional on all other variables? --- data, assumes no ground-truth discrimination between groups
+5. **Causal Bias 1**: given we known the **SCM** (along with known data & model), check if african-americans are given more recidivism scores than caucasians? --- data, predicted outcome, causal model
+6. **Causal Bias 2**: given we known the **SFM** (along with known data & model), check if african-americans are given more recidivism scores than caucasians? --- data, predicted outcome, causal model
+7. **Distribution of TV**: 
 
 ![width:200px](causal-effects-pathways.png)
 
@@ -41,7 +43,12 @@ Let's move forward with ***Total Variation (TV)***, as marked in "Causal Fairnes
 
 ## Questions to Mitigate Bias - Pathway towards Fairness
 
-1. 
+To my understanding, there is no **non-causal** version of this question. Because, if we can't identify which treatment variables to alter, there is no way of mitigating bias.
+
+1. **Causal Fairness 1**: What factors can be changed to minimize total variation (TV) between predicted recidivism scores of african-americans and caucassians? Cross-check with predicted recidivism scores since otherwise it doesn't make sense to predict fair.
+2. **Causal Fairness 2**: If the variable race is not avialable in the dataset, would the model still have similar predicted recidivism scores?
+3. **Causal Fairness 3**: How to remove direct and spurious effect but keep only indirect effect?
+4. **Paper**: Explore all other defintions from paper
 
 ---
 
