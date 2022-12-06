@@ -8,6 +8,8 @@ Assume we have the COMPAS dataset, we have a juror (*aka. model / causal model*)
 
 Assume we also have an existing dataset, based on the actions of this juror (*aka. COMPAS dataset*) in predicting recidivism on a certain population. Meaning this dataset has *predicted recidivism scores* and *actual recidivism scores*.
 
+---
+
 ## What is the question we are looking for?
 
 In broad terms, we want to know, **whether there was racial bias in predicting recidivism.**
@@ -21,6 +23,8 @@ The **causal question**: Are we marking individuals released on parole with high
 1. **Bias** (*Bias Quantification*) Is there a bias in the combination of model & dataset? How do we measure/ quantify bias?
 2. **Fairness**: (*Bias Mitigation*) What are the changes in the policy/treatment needed, to mitigate the estimated bias?
 
+---
+
 ## Optimization Measure
 
 Let's move forward with ***Total Variation (TV)***, as marked in "Causal Fairness Analysis" paper
@@ -33,6 +37,7 @@ Let's move forward with ***Total Variation (TV)***, as marked in "Causal Fairnes
 2. **Biased Prediction 1**: check if african-americans are given more recidivism scores than caucasians? --- data (with only predicted), assumes no ground-truth discrimination between groups
 3. **Biased Prediction 2**: check if african-americans are given more recidivism scores than caucasians, and compare with actual recidivism scores? --- data, no assumptions
 4. **Conditional Bias 1 & 2**: check if african-americans are given more recidivism scores than caucasians, conditional on all other variables? --- data, assumes no ground-truth discrimination between groups
+---
 5. **Causal Bias 1**: given we known the **SCM** (along with known data & model), check if african-americans are given more recidivism scores than caucasians? --- data, predicted outcome, causal model
 6. **Causal Bias 2**: given we known the **SFM** (along with known data & model), check if african-americans are given more recidivism scores than caucasians? --- data, predicted outcome, causal model
 7. **Distribution of TV**: 
