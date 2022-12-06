@@ -1,25 +1,38 @@
-# High Level Fairness: Brainstorm and Ideation
+# Fairness & Bias: High-level Overview and Ideation
 
-## What is the question we are looking for?
+---
+
+## Preset
 
 Assume we have the COMPAS dataset, we have a juror (*aka. model / causal model*) who follows an internal logic (*aka. algorithm / causal mechanism*). 
 
 Assume we also have an existing dataset, based on the actions of this juror (*aka. COMPAS dataset*) in predicting recidivism on a certain population.
 
+## What is the question we are looking for?
+
 In broad terms, we want to know, **whether there was racial bias in predicting recidivism.**
 
-The **causal question**: Are we marking individuals released on parole with high risk of re-offending within 2 years (Y) due to their race (X)?
+The **causal question**: Are we marking individuals released on parole with high risk of re-offending within 2 years (Y) due to their race (X)? If yes, how di we mitigate that?
 
 ---
 
-## Layers to Fairness
+## Two Primary Research Questions
+
+1. **Bias** (*Bias Quantification*) Is there a bias in the combination of model & dataset? How do we measure/ quantify bias?
+2. **Fairness**: (*Bias Mitigation*) What are the changes in the policy/treatment needed, to mitigate the estimated bias?
+
+---
+
+## Questions to Quantify Bias
 
 1. **Observational Bias**: check if african-americans are given more recidivism scores than caucasians? (aka. $E(Y|X1) - E(Y|X0)$ )
 2. **Conditional Bias**: check if african-americans are given more recidivism scores than caucasians, conditional on all other variables? (aka. $\sum_z E(Y|X1,Z) - \sum_z E(Y|X0,Z)$ )
 
 ---
 
-## Features we have:
+## Data Description
+
+### Features:
 
 1. Protected attribute, X = race, (*common protected attributes: race, religion, national origin, gender, marital status, age, and socioeconomic status; depends on problem domain and their relevant laws and policies*)
 2. Confounders, Z = gender, age
