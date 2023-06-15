@@ -6,6 +6,8 @@ For test data, we will use ProPoblica COMPAS dataset, along with some other data
 
 We will generate a computational pipeline, present it theoretically and show the data analysis in parallel. The goal is to start a tutorial and move towards a paper and eventually a grant.
 
-In parallel, [**we will handle Bias Detection Tools in Health Care Challenge from NCATS**](https://ncats.nih.gov/funding/challenges/bias-detection-tools-in-health-care), since the problem statement aligns a lot in between these two projects.
+All documents in ordered list:
+1. Primary writeup and planning in [main document](https://github.com/adib2149/causal-fairness-analysis/blob/main/planning.md)
+2. All code in [code notebook](https://github.com/adib2149/causal-fairness-analysis/blob/main/causal-fairness-analysis.ipynb)
 
-See the [main document](https://github.com/adib2149/causal-fairness-analysis/blob/main/main-document.md) for primary writeup and [code notebook](https://github.com/adib2149/causal-fairness-analysis/blob/main/causal-fairness-analysis.ipynb) for details.
+In parallel, [**we planned to handle Bias Detection Tools in Health Care Challenge from NCATS**](https://ncats.nih.gov/funding/challenges/bias-detection-tools-in-health-care), since the problem statement aligned a lot in between these two projects. Here is the [relevant writeup](https://github.com/adib2149/causal-fairness-analysis/blob/main/ncats-challenge.md) for that. 
